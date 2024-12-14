@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true"
+          name="C:/Users/Kavita singh/IdeaProjects/ATB9xAPIAutomationPrograms/src/test/java/org/APIProgramsPractice/ex02_RestAssuredBasics/GET/APITesting007_GET_BDDStyle.java">
+        <classes>
+            <class name="org.APIProgramsPractice.ex02_RestAssuredBasics.POST.APITesting010_GET_BDDStyle">
+            </class>
+        </classes>
+    </test>
+</suite>

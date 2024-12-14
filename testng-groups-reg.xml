@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true"
+          name="C:/Users/Kavita singh/IdeaProjects/ATB9xAPIAutomationPrograms/src/test/java/org/APIProgramsPractice/ex02_RestAssuredBasics/GET/APITesting007_GET_BDDStyle.java">
+        <groups>
+            <run>
+                <include name="reg"></include>
+            </run>
+        </groups>
+        <classes>
+            <class name="org.APIProgramsPractice.ex04_testNGExamples.APITesting014_TestNG_Groups">
+            </class>
+        </classes>
+    </test>
+</suite>
