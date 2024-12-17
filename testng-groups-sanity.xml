@@ -9,7 +9,7 @@
             </run>
         </groups>
         <classes>
-            <class name="org.APIProgramsPractice.ex04_testNGExamples.APITesting014_TestNG_Groups">
+            <class name="org.APIProgramsPractice.ex03_testNGExamples.APITesting014_TestNG_Groups">
             </class>
         </classes>
     </test>
