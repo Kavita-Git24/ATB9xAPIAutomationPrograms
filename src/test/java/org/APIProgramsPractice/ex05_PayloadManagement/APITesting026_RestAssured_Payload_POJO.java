@@ -8,18 +8,11 @@ import io.restassured.specification.RequestSpecification;
 import org.hamcrest.Matchers;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
-import java.util.LinkedHashMap;
-import java.util.Map;
-
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class APITesting025_RestAssured_Payload_POJO {
+public class APITesting026_RestAssured_Payload_POJO {
 
-    //PUT
-    //token, bookingid
     RequestSpecification r;
-    Response response;
     ValidatableResponse vr;
     Integer bookingId;
     @Test
@@ -46,7 +39,7 @@ public class APITesting025_RestAssured_Payload_POJO {
         bookingdates.setCheckin("2018-01-01");
         bookingdates.setCheckout("2019-01-01");
 
-        booking.setBookingDates(bookingdates);
+        booking.setBookingdates(bookingdates);
         booking.setAdditionalneeds("Breakfast");
 
         r= RestAssured.given();
@@ -55,7 +48,7 @@ public class APITesting025_RestAssured_Payload_POJO {
            r.contentType(ContentType.JSON);
            r.body(booking).log().all();
 
-        response=r.when().post();
+        Response response=r.when().post();
 
         vr=response.then().log().all().statusCode(200);
 

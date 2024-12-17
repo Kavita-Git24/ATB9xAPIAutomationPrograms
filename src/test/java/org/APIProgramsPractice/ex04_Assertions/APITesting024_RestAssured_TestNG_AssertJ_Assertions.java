@@ -8,7 +8,8 @@ import io.restassured.specification.RequestSpecification;
 import org.hamcrest.Matchers;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import static org.assertj.core.api.Assertions.*;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class APITesting024_RestAssured_TestNG_AssertJ_Assertions {
     RequestSpecification r;
