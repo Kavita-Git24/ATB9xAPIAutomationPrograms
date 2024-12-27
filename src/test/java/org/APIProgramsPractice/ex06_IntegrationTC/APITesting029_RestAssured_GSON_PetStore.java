@@ -1,4 +1,4 @@
-package org.APIProgramsPractice.ex05_PayloadManagement.Gson_demo;
+package org.APIProgramsPractice.ex06_IntegrationTC;
 
 import com.google.gson.Gson;
 import io.restassured.RestAssured;
@@ -6,8 +6,11 @@ import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import io.restassured.response.ValidatableResponse;
 import io.restassured.specification.RequestSpecification;
-import io.restassured.specification.ResponseSpecification;
+import org.APIProgramsPractice.ex05_PayloadManagement.Gson_demo.UserCreation;
+import org.APIProgramsPractice.ex05_PayloadManagement.Gson_demo.UserCreationResponse;
 import org.testng.annotations.Test;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class APITesting029_RestAssured_GSON_PetStore {
     RequestSpecification requestSpecification;
@@ -33,8 +36,15 @@ public class APITesting029_RestAssured_GSON_PetStore {
         requestSpecification.body(jsonString).log().all();
 
         Response response=requestSpecification.when().post();
-       // String jsonResponse
+        String jsonResponseString=response.asString();
+
         validatableResponse=response.then().log().all().statusCode(200);
+        UserCreationResponse userCreationResponse=gson.fromJson(jsonResponseString, UserCreationResponse.class);
+        System.out.println(userCreationResponse.getCode());
+
+
+        assertThat(userCreationResponse.getCode()).isNotNull().isNotZero().isPositive();
+
     }
 
 
